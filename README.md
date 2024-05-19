@@ -1,6 +1,6 @@
 # Sentiment Classifier Web Application
 
-This project is a web application built using Python, Flask, HTML, and CSS to predict the sentiment (positive or negative) of a given sentence. The application utilizes various machine learning models including Naive Bayes, Logistic Regression, Random Forest, and a fine-tuned BERT model trained on the IMDB dataset. The models are trained using `scikit-learn` and `transformers`, and are served through a Flask web framework.
+This project is a web application built using Python, Flask, HTML, and CSS to predict the sentiment (positive or negative) of a given sentence. The application utilizes various machine learning models including Naive Bayes, Logistic Regression, Random Forest, and a fine-tuned BERT model trained on a IMDB movie review dataset. The models are trained using `scikit-learn` and `transformers`, and are served through a Flask web framework.
 
 ## Project Structure
 
@@ -11,7 +11,7 @@ This project is a web application built using Python, Flask, HTML, and CSS to pr
 - **model_nb.pkl.gz**: Pickled Naive Bayes model.
 - **model_lr.pkl.gz**: Pickled Logistic Regression model.
 - **model_rf.pkl.gz**: Pickled Random Forest model.
-- **vectorizer.pkl.gz**: Pickled CountVectorizer used for text vectorization.
+- **vectorizer.pkl.gz**: Pickled TfidfVectorizer used for text vectorization.
 - **bert_model.pkl.gz**: Pickled fine-tuned BERT model and tokenizer.
 
 ## Requirements
@@ -29,7 +29,7 @@ To run this project, you will need the following packages installed:
 You can install the required packages using pip:
 
 ```bash
-pip install flask scikit-learn datasets transformers torch
+pip install flask scikit-learn datasets transformers torch gzip pickle
 ```
 
 ## Running The App
